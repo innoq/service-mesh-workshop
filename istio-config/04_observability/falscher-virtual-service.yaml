@@ -1,0 +1,13 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: falscher-vs
+spec:
+  hosts:
+  - ich-existiere-nicht
+  http:
+  - route:
+    - destination:
+        host: ich-auch-nicht
+        port:
+          number: 80

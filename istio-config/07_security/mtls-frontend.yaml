@@ -1,0 +1,11 @@
+# frontend-ingress
+apiVersion: "authentication.istio.io/v1alpha1"
+kind: Policy
+metadata:
+  name: frontend-ingress-policy
+spec:
+  targets:
+  - name: frontend-ingress
+  peers:
+  - mtls:
+      mode: PERMISSIVE

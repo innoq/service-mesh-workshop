@@ -1,0 +1,16 @@
+apiVersion: "config.istio.io/v1alpha2"
+kind: logentry
+metadata:
+  name: newlog
+  namespace: istio-system
+spec:
+  severity: '"info"'
+  timestamp: request.time | context.time | timestamp("2000-01-01T00:00:00Z") # some calls do not have a time
+  variables:
+    quelle: source.labels["app"] | source.workload.name | "unknown"
+    ziel: destination.labels["app"] | destination.workload.name | "unknown"
+    code: response.code | 0
+    antwortBytes: response.size | 0
+    latenz: response.duration | "0ms"
+    protokoll: request.scheme | context.protocol | "unknown" # results in http, https or tcp
+  monitored_resource_type: '"UNSPECIFIED"'

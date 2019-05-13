@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: frontend-ingress
+spec:
+  host: frontend-ingress
+  trafficPolicy:
+    connectionPool:
+      tcp:
+        maxConnections: 1 # maximal 100 TCP-Verbindungen
+      http:
+        maxRequestsPerConnection: 1  # maximal 10 HTTP-Requests pro Verbindung
+        http1MaxPendingRequests: 1 # maximal 1024 pending HTTP-Requests
+    outlierDetection:
+      consecutiveErrors: 1  # maximal 5 aufeinander folgende Fehler ...
+      interval: 1s  # ... innerhalb von 10 Sekunden
+      baseEjectionTime: 2m  # ansonsten pausiert der Service 2 Minuten
+      maxEjectionPercent: 100  # 100% der pods sollen pausiert werden
