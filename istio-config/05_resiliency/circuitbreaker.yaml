@@ -7,12 +7,12 @@ spec:
   trafficPolicy:
     connectionPool:
       tcp:
-        maxConnections: 1 # maximal 100 TCP-Verbindungen
+        maxConnections: 1 # maximal 1 TCP-Verbindung
       http:
-        maxRequestsPerConnection: 1  # maximal 10 HTTP-Requests pro Verbindung
-        http1MaxPendingRequests: 1 # maximal 1024 pending HTTP-Requests
+        maxRequestsPerConnection: 1  # maximal 1 HTTP-Requests pro Verbindung
+        http1MaxPendingRequests: 1 # maximal 1 pending HTTP-Requests
     outlierDetection:
-      consecutiveErrors: 1  # maximal 5 aufeinander folgende Fehler ...
-      interval: 1s  # ... innerhalb von 10 Sekunden
-      baseEjectionTime: 1m  # ansonsten pausiert der Service 2 Minuten
-      maxEjectionPercent: 100  # 100% der pods sollen pausiert werden
+      consecutiveErrors: 1  # maximal 1 aufeinander folgender Fehler ...
+      interval: 1s  # ... innerhalb von 1 Sekunde
+      baseEjectionTime: 1m  # ansonsten pausiert der Service für 1 Minute
+      maxEjectionPercent: 100  # 100% der Pods sollen pausiert werden
