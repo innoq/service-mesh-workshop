@@ -12,7 +12,7 @@ spec:
         maxRequestsPerConnection: 1  # maximal 10 HTTP-Requests pro Verbindung
         http1MaxPendingRequests: 1 # maximal 1024 pending HTTP-Requests
     outlierDetection:
-      consecutiveErrors: 2  # maximal 5 aufeinander folgende Fehler ...
-      interval: 3s  # ... innerhalb von 10 Sekunden
+      consecutiveErrors: 1  # maximal 5 aufeinander folgende Fehler ...
+      interval: 1s  # ... innerhalb von 10 Sekunden
       baseEjectionTime: 1m  # ansonsten pausiert der Service 2 Minuten
       maxEjectionPercent: 100  # 100% der pods sollen pausiert werden
