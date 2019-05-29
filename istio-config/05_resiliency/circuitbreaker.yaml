@@ -1,9 +1,9 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
-  name: recommendationservice
+  name: frontend
 spec:
-  host: recommendationservice
+  host: frontend
   trafficPolicy:
     connectionPool:
       tcp:
