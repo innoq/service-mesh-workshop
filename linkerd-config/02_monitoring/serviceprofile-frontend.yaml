@@ -1,0 +1,19 @@
+apiVersion: linkerd.io/v1alpha1
+kind: ServiceProfile
+metadata:
+  name: frontend.linkerd-demos.svc.cluster.local
+  namespace: linkerd-demos
+spec:
+  routes:
+  - condition:
+      method: GET
+      pathRegex: /cart
+    name: GET /cart
+  - condition:
+      method: GET
+      pathRegex: /product/[^/]*
+    name: GET /product/
+  - condition:
+      method: POST
+      pathRegex: /cart
+    name: POST /cart
