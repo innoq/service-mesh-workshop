@@ -1,8 +1,8 @@
 apiVersion: linkerd.io/v1alpha1
 kind: ServiceProfile
 metadata:
-  name: cartservice.linkerd-demos.svc.cluster.local
-  namespace: linkerd-demos
+  name: cartservice.default.svc.cluster.local
+  namespace: default
 spec:
   routes:
   - condition:

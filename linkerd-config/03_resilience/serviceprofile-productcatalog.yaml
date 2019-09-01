@@ -1,9 +1,8 @@
 apiVersion: linkerd.io/v1alpha1
 kind: ServiceProfile
 metadata:
-  creationTimestamp: null
-  name: productcatalogservice.linkerd-demos.svc.cluster.local
-  namespace: linkerd-demos
+  name: productcatalogservice.default.svc.cluster.local
+  namespace: default
 spec:
   routes:
   - condition:

@@ -1,8 +1,8 @@
 apiVersion: linkerd.io/v1alpha1
 kind: ServiceProfile
 metadata:
-  name: frontend.linkerd-demos.svc.cluster.local
-  namespace: linkerd-demos
+  name: frontend.default.svc.cluster.local
+  namespace: default
 spec:
   routes:
   - condition:
