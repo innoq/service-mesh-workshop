@@ -1,0 +1,25 @@
+apiVersion: linkerd.io/v1alpha1
+kind: ServiceProfile
+metadata:
+  name: frontend.linkerd-demos.svc.cluster.local
+  namespace: linkerd-demos
+spec:
+  routes:
+  - condition:
+      method: GET
+      pathRegex: /cart
+    name: GET /cart
+    isRetryable: true
+  - condition:
+      method: GET
+      pathRegex: /product/[^/]*
+    name: GET /product/
+    isRetryable: true
+  - condition:
+      method: POST
+      pathRegex: /cart
+    name: POST /cart
+  retryBudget:
+    ttl: 10s # innerhalb von 10 Sekunden
+    retryRatio: 0.1 # dürfen 10% der Anfragen aus Retries bestehen
+    minRetriesPerSecond: 5 # ab 5 Retries pro Sekunde wird gezählt
