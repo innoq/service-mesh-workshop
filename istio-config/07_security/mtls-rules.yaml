@@ -3,7 +3,7 @@ kind: DestinationRule
 metadata:
   name: adservice-istio-client-mtls
 spec:
-  host: adservice.default.svc.cluster.local
+  host: adservice.hipstershop.svc.cluster.local
   trafficPolicy:
     tls:
       mode: ISTIO_MUTUAL
@@ -15,7 +15,7 @@ kind: DestinationRule
 metadata:
   name: cartservice-istio-client-mtls
 spec:
-  host: cartservice.default.svc.cluster.local
+  host: cartservice.hipstershop.svc.cluster.local
   trafficPolicy:
     tls:
       mode: ISTIO_MUTUAL
@@ -27,7 +27,7 @@ kind: DestinationRule
 metadata:
   name: checkoutservice-istio-client-mtls
 spec:
-  host: checkoutservice.default.svc.cluster.local
+  host: checkoutservice.hipstershop.svc.cluster.local
   trafficPolicy:
     tls:
       mode: ISTIO_MUTUAL
@@ -38,7 +38,7 @@ kind: DestinationRule
 metadata:
   name: currencyservice-istio-client-mtls
 spec:
-  host: currencyservice.default.svc.cluster.local
+  host: currencyservice.hipstershop.svc.cluster.local
   trafficPolicy:
     tls:
       mode: ISTIO_MUTUAL
@@ -50,7 +50,7 @@ kind: DestinationRule
 metadata:
   name: emailservice-istio-client-mtls
 spec:
-  host: emailservice.default.svc.cluster.local
+  host: emailservice.hipstershop.svc.cluster.local
   trafficPolicy:
     tls:
       mode: ISTIO_MUTUAL
@@ -62,7 +62,7 @@ kind: DestinationRule
 metadata:
   name: paymentservice-istio-client-mtls
 spec:
-  host: paymentservice.default.svc.cluster.local
+  host: paymentservice.hipstershop.svc.cluster.local
   trafficPolicy:
     tls:
       mode: ISTIO_MUTUAL
@@ -74,7 +74,7 @@ kind: DestinationRule
 metadata:
   name: productcatalogservice-istio-client-mtls
 spec:
-  host: productcatalogservice.default.svc.cluster.local
+  host: productcatalogservice.hipstershop.svc.cluster.local
   trafficPolicy:
     tls:
       mode: ISTIO_MUTUAL
@@ -86,7 +86,7 @@ kind: DestinationRule
 metadata:
   name: shippingservice-istio-client-mtls
 spec:
-  host: shippingservice.default.svc.cluster.local
+  host: shippingservice.hipstershop.svc.cluster.local
   trafficPolicy:
     tls:
       mode: ISTIO_MUTUAL
@@ -98,7 +98,7 @@ kind: DestinationRule
 metadata:
   name: recommendationservice-istio-client-mtls
 spec:
-  host: recommendationservice.default.svc.cluster.local
+  host: recommendationservice.hipstershop.svc.cluster.local
   trafficPolicy:
     tls:
       mode: ISTIO_MUTUAL
@@ -110,7 +110,7 @@ kind: DestinationRule
 metadata:
   name: frontend-istio-client-mtls
 spec:
-  host: frontend.default.svc.cluster.local
+  host: frontend.hipstershop.svc.cluster.local
   trafficPolicy:
     tls:
       mode: ISTIO_MUTUAL
@@ -122,7 +122,19 @@ kind: DestinationRule
 metadata:
   name: frontend-ingress-istio-client-mtls
 spec:
-  host: frontend-ingress.default.svc.cluster.local
+  host: frontend-ingress.hipstershop.svc.cluster.local
   trafficPolicy:
     tls:
       mode: ISTIO_MUTUAL
+
+---
+
+apiVersion: "networking.istio.io/v1alpha3"
+kind: DestinationRule
+metadata:
+  name: currency-external-istio-client-mtls
+spec:
+  host: currency-provider-external
+  trafficPolicy:
+    tls:
+      mode: DISABLE

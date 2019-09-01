@@ -133,7 +133,6 @@ spec:
   - mtls:
       mode: STRICT
 
-
 ---
 # frontend-ingress
 apiVersion: "authentication.istio.io/v1alpha1"

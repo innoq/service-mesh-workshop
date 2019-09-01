@@ -9,8 +9,8 @@ spec:
       tcp:
         maxConnections: 1 # maximal 1 TCP-Verbindung
       http:
-        maxRequestsPerConnection: 1  # maximal 1 HTTP-Requests pro Verbindung
-        http1MaxPendingRequests: 1 # maximal 1 pending HTTP-Requests
+        http1MaxPendingRequests: 1 # maximal 1 pending HTTP-Request
+        http2MaxRequests: 1 # maximal 1 HTTP2-Request pro Endpunkt
     outlierDetection:
       consecutiveErrors: 1  # maximal 1 aufeinander folgender Fehler ...
       interval: 1s  # ... innerhalb von 1 Sekunde

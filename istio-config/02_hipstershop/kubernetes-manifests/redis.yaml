@@ -45,6 +45,13 @@ spec:
           requests:
             cpu: 70m
             memory: 200Mi
+        securityContext:
+          readOnlyRootFilesystem: true
+          capabilities:
+            add:
+            - CHOWN
+            drop:
+            - ALL
       volumes:
       - name: redis-data
         emptyDir: {}

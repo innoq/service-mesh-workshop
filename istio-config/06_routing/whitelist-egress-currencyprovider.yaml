@@ -19,6 +19,7 @@ metadata:
 spec:
   hosts:
   - www.ecb.europa.eu
+  location: MESH_EXTERNAL
   ports:
   - number: 80
     name: http

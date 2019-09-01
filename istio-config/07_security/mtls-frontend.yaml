@@ -8,3 +8,16 @@ spec:
   peers:
   - mtls:
       mode: PERMISSIVE
+
+---
+
+apiVersion: "authentication.istio.io/v1alpha1"
+kind: Policy
+metadata:
+  name: cuurency-policy
+spec:
+  targets:
+  - name: currency-provider-external
+  peers:
+  - mtls:
+      mode: PERMISSIVE
