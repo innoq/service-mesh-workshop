@@ -6,6 +6,6 @@ spec:
   service: frontend-external
   backends:
   - service: frontend
-    weight: 10m
+    weight: 100m
   - service: frontend2
-    weight: 90m
+    weight: 900m
