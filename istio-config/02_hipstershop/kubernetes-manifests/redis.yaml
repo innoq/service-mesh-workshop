@@ -22,6 +22,7 @@ spec:
       labels:
         app: redis-cart
     spec:
+      serviceAccountName: redis-cart
       containers:
       - name: redis
         image: redis:alpine
@@ -49,9 +50,11 @@ spec:
           readOnlyRootFilesystem: true
           capabilities:
             add:
-            - CHOWN
+              - CHOWN
+              - SETGID
+              - SETUID
             drop:
-            - ALL
+              - ALL
       volumes:
       - name: redis-data
         emptyDir: {}

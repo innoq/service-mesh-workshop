@@ -1,0 +1,57 @@
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: redis-cart
+---
+apiVersion: policy/v1beta1
+kind: PodSecurityPolicy
+metadata:
+  name: psp-redis-cart
+spec:
+  allowedCapabilities:
+    - CHOWN
+    - SETUID
+    - SETGID
+    - NET_ADMIN
+    - NET_RAW
+  fsGroup:
+    rule: 'RunAsAny'
+  runAsUser:
+    rule: 'RunAsAny'
+  seLinux:
+    rule: 'RunAsAny'
+  supplementalGroups:
+    rule: 'RunAsAny'
+  volumes:
+    - 'secret'
+    - 'emptyDir'
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: psp:redis-cart
+  namespace: default
+rules:
+  - apiGroups:
+      - policy
+    resourceNames:
+      - psp-redis-cart
+    resources:
+      - podsecuritypolicies
+    verbs:
+      - use
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: psp:redis-cart
+  namespace: default
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: psp:redis-cart
+subjects:
+  - kind: ServiceAccount
+    name: redis-cart
+    namespace: default
