@@ -7,8 +7,3 @@ kiali:
   tag: v0.21
 pilot:
   traceSampling: 100.0
-global:
-  controlPlaneSecurityEnabled: true
-  mtls:
-    enabled: true
-
