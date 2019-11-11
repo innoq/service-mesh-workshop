@@ -8,12 +8,12 @@ spec:
   - condition:
       method: POST
       pathRegex: /hipstershop\.CartService/AddItem
-    name: POST /hipstershop.CartService/AddItem
+    name: POST CartService AddItem
   - condition:
       method: POST
       pathRegex: /hipstershop\.CartService/EmptyCart
-    name: POST /hipstershop.CartService/EmptyCart
+    name: POST CartService EmptyCart
   - condition:
       method: POST
       pathRegex: /hipstershop\.CartService/GetCart
-    name: POST /hipstershop.CartService/GetCart
+    name: POST CartService GetCart
