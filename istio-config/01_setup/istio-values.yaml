@@ -6,7 +6,7 @@ tracing:
   enabled: true
 kiali:
   enabled: true
-  tag: v1.4.2 
+  tag: v1.9.1 
 pilot:
   traceSampling: 100.0
 global:
