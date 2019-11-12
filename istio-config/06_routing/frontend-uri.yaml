@@ -11,6 +11,8 @@ spec:
   - match:
     - uri:
         prefix: "/neu"
+    rewrite:
+      uri: "/"
     route:
     - destination:
         host: frontend
