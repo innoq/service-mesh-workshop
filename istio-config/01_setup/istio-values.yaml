@@ -11,3 +11,6 @@ pilot:
   traceSampling: 100.0
 global:
   controlPlaneSecurityEnabled: true
+  mtls:
+    auto: true
+    enabled: false
