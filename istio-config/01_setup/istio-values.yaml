@@ -1,16 +1,16 @@
 # https://istio.io/docs/reference/config/installation-options/
 
 grafana:
-  enabled: true
+  enabled: true         # installiere Grafana
 tracing:
-  enabled: true
+  enabled: true         # installiere Jaeger
 kiali:
-  enabled: true
-  tag: v1.10.0
+  enabled: true         # installiere Kiali
+  tag: v1.10.0          # Kiali Version
 pilot:
-  traceSampling: 100.0
+  traceSampling: 100.0  # Tracing für alle Anfragen
 global:
-  controlPlaneSecurityEnabled: true
+  controlPlaneSecurityEnabled: true  # Control Plane mTLS
   mtls:
-    auto: true
-    enabled: false
+    auto: true          # automatisches mTLS zwischen Microservices 
+    enabled: false      # manuelles mTLS ausgeschaltet
