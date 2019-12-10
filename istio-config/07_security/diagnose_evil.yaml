@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Pod
+metadata:
+  name: diagnose-evil
+  annotations:
+    sidecar.istio.io/inject: "false"
+spec:
+  containers:
+  - image: joergm/diagnose
+    name: diagnose-evil
