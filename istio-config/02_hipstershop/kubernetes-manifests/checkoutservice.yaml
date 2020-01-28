@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: gcr.io/hanna-prinz/checkoutservice
+          image: gcr.io/k8s-training-248212/hipstershop/checkoutservice
           ports:
           - containerPort: 5050
           readinessProbe:

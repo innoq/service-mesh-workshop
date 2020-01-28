@@ -144,4 +144,4 @@ spec:
   - name: frontend-ingress
   peers:
   - mtls:
-      mode: STRICT
+      mode: PERMISSIVE

@@ -21,7 +21,7 @@ spec:
   restartPolicy: Never
   containers:
   - name: main
-    image: gcr.io/hanna-prinz/loadgenerator:63ec966
+    image: gcr.io/k8s-training-248212/hipstershop/loadgenerator:63ec966
     env:
     - name: FRONTEND_ADDR
       value: "frontend:80"

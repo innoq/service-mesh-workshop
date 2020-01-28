@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: server
-        image: gcr.io/hanna-prinz/shippingservice
+        image: gcr.io/k8s-training-248212/hipstershop/shippingservice
         ports:
         - containerPort: 50051
         readinessProbe:

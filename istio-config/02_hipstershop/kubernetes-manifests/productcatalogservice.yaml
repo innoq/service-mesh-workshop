@@ -25,7 +25,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: gcr.io/hanna-prinz/productcatalogservice
+        image: gcr.io/k8s-training-248212/hipstershop/productcatalogservice
         ports:
         - containerPort: 3550
         readinessProbe:
