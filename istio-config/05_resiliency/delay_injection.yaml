@@ -6,10 +6,11 @@ spec:
   hosts:
   - productcatalogservice
   http:
-  - route:
+  - fault:
+      delay:
+        percentage:
+          value: 100
+        fixedDelay: 1s
+    route:
     - destination:
         host: productcatalogservice
-    fault:
-      delay:
-        percent: 100
-        fixedDelay: 1s
