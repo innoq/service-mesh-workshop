@@ -11,13 +11,13 @@ spec:
 
 ---
 
-apiVersion: "authentication.istio.io/v1alpha1"
-kind: Policy
+apiVersion: security.istio.io/v1beta1
+kind: PeerAuthentication
 metadata:
-  name: currency-policy
+  name: frontend-policy
 spec:
-  targets:
-  - name: currency-provider-external
-  peers:
-  - mtls:
-      mode: PERMISSIVE
+  selector:
+    matchLabels:
+      name: currency-provider-external
+  mtls:
+    mode: PERMISSIVE

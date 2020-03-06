@@ -1,4 +1,4 @@
-apiVersion: "networking.istio.io/v1alpha3"
+apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
   name: adservice-istio-client-mtls
@@ -10,7 +10,7 @@ spec:
 
 ---
 
-apiVersion: "networking.istio.io/v1alpha3"
+apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
   name: cartservice-istio-client-mtls
@@ -22,7 +22,7 @@ spec:
 
 ---
 
-apiVersion: "networking.istio.io/v1alpha3"
+apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
   name: checkoutservice-istio-client-mtls
@@ -33,7 +33,7 @@ spec:
       mode: ISTIO_MUTUAL
 ---
 
-apiVersion: "networking.istio.io/v1alpha3"
+apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
   name: currencyservice-istio-client-mtls
@@ -45,7 +45,7 @@ spec:
 
 ---
 
-apiVersion: "networking.istio.io/v1alpha3"
+apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
   name: emailservice-istio-client-mtls
@@ -57,7 +57,7 @@ spec:
 
 ---
 
-apiVersion: "networking.istio.io/v1alpha3"
+apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
   name: paymentservice-istio-client-mtls
@@ -69,7 +69,7 @@ spec:
 
 ---
 
-apiVersion: "networking.istio.io/v1alpha3"
+apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
   name: productcatalogservice-istio-client-mtls
@@ -81,7 +81,7 @@ spec:
 
 ---
 
-apiVersion: "networking.istio.io/v1alpha3"
+apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
   name: shippingservice-istio-client-mtls
@@ -93,7 +93,7 @@ spec:
 
 ---
 
-apiVersion: "networking.istio.io/v1alpha3"
+apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
   name: recommendationservice-istio-client-mtls
@@ -105,7 +105,7 @@ spec:
 
 ---
 
-apiVersion: "networking.istio.io/v1alpha3"
+apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
   name: frontend-istio-client-mtls
@@ -117,7 +117,7 @@ spec:
 
 ---
 
-apiVersion: "networking.istio.io/v1alpha3"
+apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
   name: frontend-ingress-istio-client-mtls
@@ -129,7 +129,7 @@ spec:
 
 ---
 
-apiVersion: "networking.istio.io/v1alpha3"
+apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
   name: currency-external-istio-client-mtls

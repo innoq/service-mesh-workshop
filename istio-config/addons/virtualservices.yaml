@@ -1,5 +1,5 @@
 
-apiVersion: networking.istio.io/v1alpha3
+apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: adservice
@@ -13,7 +13,7 @@ spec:
         port:
           number: 9555
 ---
-apiVersion: networking.istio.io/v1alpha3
+apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: cartservice
@@ -27,7 +27,7 @@ spec:
         port:
           number: 7070
 ---
-apiVersion: networking.istio.io/v1alpha3
+apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: checkoutservice
@@ -42,7 +42,7 @@ spec:
           number: 5050
 
 ---
-apiVersion: networking.istio.io/v1alpha3
+apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: currencyservice
@@ -56,7 +56,7 @@ spec:
         port:
           number: 7000
 ---
-apiVersion: networking.istio.io/v1alpha3
+apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: emailservice
@@ -70,7 +70,7 @@ spec:
         port:
           number: 5000
 ---
-apiVersion: networking.istio.io/v1alpha3
+apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: paymentservice
@@ -84,7 +84,7 @@ spec:
         port:
           number: 50051
 ---
-apiVersion: networking.istio.io/v1alpha3
+apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: productcatalogservice
@@ -99,7 +99,7 @@ spec:
           number: 3550
 
 ---
-apiVersion: networking.istio.io/v1alpha3
+apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: recommendationservice
@@ -114,7 +114,7 @@ spec:
           number: 8080
 
 ---
-apiVersion: networking.istio.io/v1alpha3
+apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: shippingservice

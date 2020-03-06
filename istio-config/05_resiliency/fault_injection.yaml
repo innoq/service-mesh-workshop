@@ -1,4 +1,4 @@
-apiVersion: networking.istio.io/v1alpha3
+apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: recommendationservice
@@ -12,4 +12,4 @@ spec:
     fault:
       abort:
         percent: 50
-        httpStatus: 504
+        httpStatus: 500
