@@ -11,8 +11,5 @@ spec:
   - route:
     - destination:
         host: frontend
-        subset: v1
-      weight: 100
-    mirror:
-      host: frontend
-      subset: v2
+        port:
+          number: 80

@@ -6,7 +6,7 @@ spec:
   hosts:
   - "*"
   gateways:
-  - frontend-gateway
+  - ingressgateway.istio-system
   http:
   - match:
     - uri:
