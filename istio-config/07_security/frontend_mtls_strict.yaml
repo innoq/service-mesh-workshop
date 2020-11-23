@@ -1,10 +1,8 @@
-apiVersion: authentication.istio.io/v1alpha1
-kind: Policy
+apiVersion: security.istio.io/v1beta1
+kind: PeerAuthentication
 metadata:
-  name: frontend-policy
+  name: default
+  namespace: default
 spec:
-  targets:
-  - name: frontend
-  peers:
-  - mtls:
-      mode: STRICT
+  mtls:
+    mode: STRICT
