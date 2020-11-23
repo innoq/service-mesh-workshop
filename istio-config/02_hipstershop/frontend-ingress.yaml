@@ -5,9 +5,10 @@ metadata:
 spec:
   hosts:
   - "*"
+  gateways:
+  - istio-system/ingressgateway
   http:
-  - name: "frontend"
-    route:
+  - route:
     - destination:
         host: frontend
         port:
