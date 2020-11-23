@@ -5,10 +5,9 @@ metadata:
 spec:
   hosts:
   - "*"
-  gateways:
-  - ingressgateway.istio-system.svc.cluster.local
   http:
-  - route:
+  - name: "frontend"
+    route:
     - destination:
         host: frontend
         port:
